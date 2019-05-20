@@ -7,9 +7,9 @@ class LandmarksController < ApplicationController
   end
   
   post '/landmarks' do
-    @landmark = Landmark.create(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
-    @landmark.figure = Figure.find_or_create_by(name: params[:landmark][:figure])
-    @landmark.save
+    @landmark = Landmark.create(params[:landmark])
+    # @landmark.figure = Figure.find_or_create_by(name: params[:landmark][:figure])
+    # @landmark.save
     redirect "/landmarks/#{@landmark.id}"
   end
   
