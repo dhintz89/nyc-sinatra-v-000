@@ -5,7 +5,9 @@
     <li><%=title.name%></li>
   <% end %>
 </ul>
+<h3>Landmarks</h3>
 <ul>
-  <%@figure.landmarks.each do |lm| %>
-    <li><%=lm.name%><br>
-<% end %>
+  <%@figure.landmarks.each do |landmark| %>
+    <li><%=landmark.name%></li>
+  <% end %>
+</ul>
