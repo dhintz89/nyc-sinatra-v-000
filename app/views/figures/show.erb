@@ -1,7 +1,11 @@
-<%=@figure.name%><br>
-<%@figure.titles.each do |tt| %>
-  <%=tt.name%><br>
-<% end %>
-<%@figure.landmarks.each do |lm| %>
-  <%=lm.name%><br>
+<h1><%=@figure.name%><br></h1><br>
+<h3>Titles</h3>
+<ul>
+  <%@figure.titles.each do |title| %>
+    <li><%=title.name%></li>
+  <% end %>
+</ul>
+<ul>
+  <%@figure.landmarks.each do |lm| %>
+    <li><%=lm.name%><br>
 <% end %>
